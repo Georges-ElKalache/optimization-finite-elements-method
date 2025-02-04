@@ -1,0 +1,8 @@
+function Temp=genere_temp(nomfile,n)
+[Nbpt,~,~,~,~,~]=Lecmail(nomfile);
+%R=genere_R_alea(n);
+Temp=sparse(Nbpt,n);
+for i=1:n
+    Temp(:,i)=prob_direct(R(i,2),R(i,3),nomfile,0,1e4);
+end
+end
